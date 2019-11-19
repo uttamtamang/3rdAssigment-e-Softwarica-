@@ -1,7 +1,5 @@
-package com.example.esoftwarica.ui.dashboard;
+package com.example.esoftwarica.ui.addstudents;
 
-import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,36 +7,26 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.esoftwarica.R;
 import com.example.esoftwarica.ui.home.HomeFragment;
 
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.util.List;
-
-public class DashboardFragment extends Fragment implements View.OnClickListener {
+public class AddStudentsFragment extends Fragment implements View.OnClickListener {
 
     private EditText etname,etage,etaddress;
     private Button btnsave;
     private RadioButton rdom,rdof,rdot;
 
-    private DashboardViewModel dashboardViewModel;
+    private AddStudentsViewModel dashboardViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_dashboard,container,false);
+        View v = inflater.inflate(R.layout.fragment_addstudents,container,false);
 
         etname = v.findViewById(R.id.etname);
         etage = v.findViewById(R.id.etage);
